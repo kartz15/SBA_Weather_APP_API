@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-section">
+            <h1>my Weather App</h1>
+            <div class="input-group">
+                <input type="text" id="cityInput" placeholder="Enter city name" list="cityList">
+                <button id="fetchWeatherButton">Get Weather</button>
+            </div>
+            <datalist id="cityList"></datalist>
+            <div id="weatherInfo"></div>
+        </div>
+        <div class="history-section">
+            <h3>Search History</h3>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Temperature (°C)</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="app.mjs" async defer></script>
+</body>
+</html>
