@@ -1,4 +1,4 @@
-export {fetchCitySuggestions , clearCityList};
+export {fetchCitySuggestions }
 
 const GEO_NAMES_USERNAME = 'karthi5565'; 
 const GEO_NAMES_URL = `http://api.geonames.org/searchJSON?username=${GEO_NAMES_USERNAME}&style=full&maxRows=10&name_startsWith=`;
@@ -14,7 +14,3 @@ const GEO_NAMES_URL = `http://api.geonames.org/searchJSON?username=${GEO_NAMES_U
     }
 }
 
-function clearCityList() {
-    const datalist = document.getElementById('cityList');
-    datalist.innerHTML = ''; 
-}

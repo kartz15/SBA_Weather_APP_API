@@ -1,8 +1,8 @@
-import { fetchCitySuggestions ,clearCityList} from './modules/geoNamesApi.mjs';
+import { fetchCitySuggestions} from './modules/geoNamesApi.mjs';
 import { initializeWeatherApp, fetchWeather } from "./modules/weatherApi.mjs";
 
 function initializeApp() {
-    initializeWeatherApp(); // Set up weather fetching
+    initializeWeatherApp(); 
     const cityInput = document.getElementById('cityInput');
 
     cityInput.addEventListener('input', async () => {
@@ -25,6 +25,10 @@ function updateCityList(cities) {
         option.value = city.name + (city.adminName1 ? ', ' + city.adminName1 : '');
         datalist.appendChild(option);
     });
+}
+function clearCityList() {
+    const datalist = document.getElementById('cityList');
+    datalist.innerHTML = ''; 
 }
 
 // Initialize the app

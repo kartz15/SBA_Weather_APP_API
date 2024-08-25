@@ -1,5 +1,7 @@
+// import { fetchCitySuggestions ,updateCityList,clearCityList} from './modules/geoNamesApi.mjs';
 export {fetchWeather,initializeWeatherApp,addToHistory}
-import{clearCityList} from "./geoNamesApi.mjs";
+
+
 
 const API_KEY = "26c08ba67736bc5ca8daa4707cc564fc";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -51,7 +53,7 @@ async function fetchWeather(city) {
             addToHistory(cityName, countryCode, temperatureCelsius.toFixed(2), weatherDescription);
             
             document.getElementById('cityInput').value = '';
-            clearCityList();
+            //clearCityList();
 
         } else {
             document.getElementById('weatherInfo').innerHTML = `<p>Error: ${jsonData.message}</p>`;
